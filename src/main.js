@@ -3,15 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-// import 'fullpage.js/vendors/scrolloverflow'
-// import 'fullpage.js/dist/fullpage.min.css'
-// import './fullpage.scrollHorizontally.min'
-// import VueFullPage from 'vue-fullpage.js'
-// import Reveal from 'reveal.js'
-// import 'reveal.js/css/reset.css'
+import NutUI from '@nutui/nutui'
+import '@nutui/nutui/dist/nutui.css'
 
 Vue.config.productionTip = false
-// Vue.use(Reveal)
+NutUI.install(Vue)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

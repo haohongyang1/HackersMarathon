@@ -13,6 +13,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@nutui/nutui": "^2.1.5",
     "reveal.js": "^3.8.0",
     "vue": "^2.5.2",
     "vue-fullpage.js": "^0.1.4",

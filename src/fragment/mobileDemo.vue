@@ -43,4 +43,6 @@ export default {
   left 18px
   background #ffffff
   border-radius 1%
+  &::-webkit-scrollbar
+    width 0 !important
 </style>
