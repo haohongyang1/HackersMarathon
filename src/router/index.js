@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import index from '@/components/index'
 import list from '@/components/list'
 import detail from '@/components/detail'
-
+import teacherList from '@/components/teacherList'
 Vue.use(Router)
 
 export default new Router({
@@ -20,6 +20,10 @@ export default new Router({
         path: 'detail',
         name: 'detail',
         component: detail
+      }, {
+        path: 'teacherList',
+        name: 'teacherList',
+        component: teacherList
       }]
     }
   ]

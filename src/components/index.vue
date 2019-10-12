@@ -10,7 +10,7 @@
 <!--      </section>-->
 <!--    </div>-->
     <router-link to="/">首页</router-link>
-    <router-link to="/list">列表页</router-link>
+    <router-link to="/teacherList">列表页</router-link>
     <router-link to="/detail">详情页</router-link>
     <mobile-demo>
       <router-view></router-view>
