@@ -48,4 +48,10 @@ export default {
   img, video
     max-width 100% !important
     max-height 100% !important
+  .nut-tab
+    padding 0
+  .nut-tab-item
+    height auto
+    min-height 200px
+    padding 0
 </style>

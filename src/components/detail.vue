@@ -1,7 +1,7 @@
 <template>
   <div class="page-container-detail">
     <header>
-      <video src="/static/video/teacher.mp4" loop></video>
+      <video src="/static/video/teacher.mp4" autoplay loop></video>
     </header>
     <div class="base-info">
       <div class="info">
@@ -29,48 +29,48 @@
         <div class="item">完课率 <span>100%</span></div>
       </div>
     </div>
-    <div class="info-block">
-      <h1>老师信息</h1>
-      <div class="table">
-        <div class="tr">
-          <div class="tr-left">来自</div>
-          <div class="tr-right">美国</div>
-        </div>
-        <div class="tr">
-          <div class="tr-left">学位</div>
-          <div class="tr-right">学士</div>
-        </div>
-        <div class="tr">
-          <div class="tr-left">毕业院校</div>
-          <div class="tr-right">Utah State University</div>
-        </div>
-        <div class="tr">
-          <div class="tr-left">教学特点</div>
-          <div class="tr-right">你好，我是Capri老师，来自美国，毕业于Utah State University，已获得学士学位，已获得TEFL资格证书，我有1年教学经验。我曾在网上教过中国学生学英语，还曾在一所小学工作，做过学生的家教。我喜欢和孩子们在一起享受快乐！我努力为学生提供良好的课堂环境，让他们学习和练习英语。闲暇时，我喜欢阅读和学习其他外语。我等不及要见你了！欢迎大家来订课！</div>
-        </div>
-        <div class="tr">
-          <div class="tr-left">自我介绍</div>
-          <div class="tr-right">Utah State University</div>
-        </div>
-      </div>
-    </div>
+    <nut-tab @tab-switch="tabSwitch">
+      <nut-tab-panel tabTitle="老师信息" iconUrl="/static/info.svg">
+        <base-info></base-info>
+      </nut-tab-panel>
+      <nut-tab-panel tabTitle="内容列表" iconUrl="/static/content.svg"></nut-tab-panel>
+      <nut-tab-panel tabTitle="课程列表" iconUrl="/static/class.svg"></nut-tab-panel>
+    </nut-tab>
   </div>
 </template>
 
 <script>
+import baseInfo from './base_info.vue'
 export default {
   name: 'list',
   data () {
     return {
       msg: 'A project that includes a video streaming and queuing system',
-      options: {
-        licenseKey: 'YOUR_KEY_HEERE',
-        anchors: ['', 'page2', 'page3'],
-        sectionsColor: '#fff'
-      }
+      editableTabs: [
+        {
+          'tabTitle': '老师信息',
+          'tabUrl': '/info.svg'
+        },
+        {
+          'tabTitle': '视频列表',
+          'tabUrl': 'http://img13.360buyimg.com/uba/jfs/t30331/209/562746340/2190/6619973d/5bf763aaN6ff02099.jpg',
+          'content': '<p>日用品内容</p>'
+        },
+        {
+          'tabTitle': '课程列表',
+          'tabUrl': 'http://img20.360buyimg.com/uba/jfs/t30346/262/553689202/2257/5dfa3983/5bf76407N72deabf4.jpg',
+          'content': '<p>运动器材内容</p>'
+        }
+      ]
+    }
+  },
+  methods: {
+    tabSwitch: function (index, event) {
+      console.log(index + '--' + event.target)
     }
   },
   components: {
+    baseInfo
   }
 }
 </script>
@@ -105,7 +105,7 @@ export default {
           max-width 100%
           max-height 100%
       .names
-        width 200px
+        width 168px
       .title
         font-size 24px
         color #000
@@ -149,6 +149,4 @@ export default {
       .tr-right
         flex 3
         color #333
-
-
 </style>

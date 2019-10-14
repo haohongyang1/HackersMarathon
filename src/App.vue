@@ -23,4 +23,7 @@ export default {
     width: 100%;
     height: 100%;
   }
+  .reveal a, .reveal a:hover {
+    color: #93a1a1;
+  }
 </style>
