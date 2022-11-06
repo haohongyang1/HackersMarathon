@@ -62,7 +62,7 @@
     "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0",
     "stylus-loader": "^3.0.1",
-    "stylus": "0.52.4",
+    "stylus": "0.59.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1"
   },
